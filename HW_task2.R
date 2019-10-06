@@ -3,8 +3,8 @@
 choose_data <- function(data,col_sel,row_sel,fun_for_numeric = mean) {
   selected_data <- data[row_sel,col_sel]
   # make slice before evaluating
-  lst <- list()
-  counter <- 1 # index for lst
+  lst <- list(selected_data)
+  counter <- 2 # index for lst
   for (variable in selected_data) {
     if (is.numeric(variable)) {
       
